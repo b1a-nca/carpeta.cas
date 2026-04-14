@@ -1,0 +1,293 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1">
+<link href="seccion1.css" rel="stylesheet" type="text/css" media="all">
+  <title>Carpta CAS</title>
+  
+  
+
+  
+</head>
+
+
+<body>
+
+
+  <div id="header">
+    <div id="headerinside">
+    <h1>Mi ficha personal</h1>
+    <p>by Bia R.</p>
+    <img src="images/sleepycat.gif" style="width:150px;">
+  </div>
+  
+</div>
+
+
+
+  <div id="navbar">
+
+</div>
+<div id="main">
+  
+  <div id="leftside">
+
+<div id="nav">
+    <div class="banner">
+    <img src="images/home2banner.png">
+<div class="bannertxt">
+  <p>Otras secciones</p>
+</div>
+  </div>
+<div class="navbuttons">
+  <div class="button">
+  <img src="images/bt14d.png"><a href="index.html"><button>Inicio</button></a>
+  <br>
+  <img src="images/bt24b.png"><a href="seccion 1.html"><button>Ficha Personal</button></a>
+  <br>
+  <img src="images/bt24b.png"><a href="seccion2.html"><button>Seccion 2</button></a>
+  <br>
+  <img src="images/bt14d.png"><a href="seccion3.html"><button>Seccion 3</button></a>
+</div>
+</div>
+
+
+
+<div id="nav">
+  <div class="banner">
+  <img src="images/home2banner.png">
+<div class="bannertxt">
+<p>Mi estado:</p>
+</div>
+
+</div>
+<div>
+ <p style="text-align: center;"> <img src="https://i.pinimg.com/736x/9e/d2/47/9ed2471d37580828c7b76b832774272b.jpg" style="width:170px;padding-bottom:10px;border-radius:5px;" class="featuredimg"> </p>
+</div>
+
+</div>
+
+<p style="text-align:center;margin-bottom:10px;z-index:999;">  
+  </p>
+  </div>
+</div>
+<div id="middle">
+  
+  <p style="font-family: spirit;font-size:30px;margin-bottom:5px;margin-top:10px;">Bienvnid@ a mi ficha personal </p>
+  <img src="images/mametchi.png" style="width:100px;filter:saturate(70%);float:right;margin:10px;animation: jerk 0.5s infinite;">
+
+    
+  <p> Mi nombre es Bianca, tengo 15 años, naci en el hospital santa isabel, san borja, Lima, Peru. Mi fecha de nacimiento es el 26 de abril de 2010.Mi mamá se llama Nadya Sandoval, mi papá Jair Ramirez, tengo 1 hermano 
+    <br><br>
+    <img src="images/memetchi.png" style="width:100px;filter:saturate(70%);float:left;margin:10px;animation: jerkr 0.5s infinite;">
+    Mis hobbies son leer,normalmemte historias de ficcion o mitologia griega, escuchar musica, cantar (sobretodo musicales); Mis talentos son la programacion, sobre todo de sitios web y creatividad en general :3. Para CAS me gustaria poder participar en muchas actividades de gran impacto, lograr un cambio positivo y crecimiento personal.
+  </p>
+  
+<p style="text-align: center;"><img src="images/fish.png" style="width:400px;margin-top:20px;margin-bottom:10px;"></p>
+
+
+
+
+
+<div id="musicthing">
+  <div id="lastfm-widget">
+    <div id="widget"><img src="images/beat.gif" style="width:20px;margin-right:5px;"><span id="song">&#8987;</span></div>
+    <div>
+        <p style="font-size:20px;"><small>latest played song on <a href="https://www.last.fm/es/user/b1bi_an" target="_blank">last.fm</a></small></p>
+        <p style="font-size:20px;"><small>powered by <a href="https://github.com/biancarosa/lastfm-last-played"
+                    target="_blank">@b1bi_an/lastfm-last-played</a></small></p>
+    </div>
+</div>
+<script type="text/javascript">
+    let user = 'b1bi_an';
+    let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+    let song = document.querySelector('#song');
+    fetch(url)
+        .then(function (response) {
+            return response.json()
+        }).then(function (json) {
+            song.innerHTML = json['track']['name'] + ' - ' + json['track']['artist']['#text'];
+        });
+</script>
+</div>
+
+<div id="middlebottomstuff">
+
+<img src="images/teddybear.png" style="width:160px;margin-left:15px; margin-top:20px;filter:saturate(75%);">
+
+
+  <div class="one">
+  
+    <div class="currentlytitle">Mis gustos...</div>
+  <div class="currentlystuff">
+  <p>
+ <img src="images/book6.gif"> The song of Achilles
+    <br><img src="images/tv10.gif"> Glee
+    <br><img src="images/9.gif"> Parasite - MICO
+    <br><img src="images/20.gif"> Tomodachi life
+  </p>
+  
+  </div>
+  </div>
+
+</div>
+</div>
+
+
+<div id="rightside">
+  <div id="nav">
+    <div class="banner">
+      <img src="images/home2banner.png">
+  <div class="bannertxt">
+    <p>Updates</p>
+  </div>
+    </div>
+    <div class="updates">
+      <p>
+        <br><span class="udate">04/11/2026</span>  El sitio web ha sido creado! :3
+        </p>
+      </div>
+  <br>
+  </div>
+
+  <div class="buttonbox"><p>web en desarrollo :3
+    <div class="buttonflex">
+    
+    </div>
+    
+    <script>
+    function myFunction() {
+      // Get the text field
+      var copyText = document.getElementById("myInput");
+    
+      // Select the text field
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+       // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.value);
+    }
+    </script>
+    <p style="white-space: nowrap">made with love <img src="images/speech3.gif" style="height:15px;"></p>
+    
+    </div>
+
+  <div id="nav">
+    <div class="banner">
+      <img src="images/home2banner.png">
+  <div class="bannertxt">
+    <p>Otros</p>
+
+  </div>
+    </div>
+  <br>
+
+
+  </div>
+
+
+
+
+    </div>
+  
+
+
+</div>
+
+
+<div id="footer"> 
+  
+</div>
+
+
+<script>
+
+  var b = document.body;
+  var imgurl = "images/cookie3.gif";
+  var size = [10, 20];
+  function rand(min, max)
+  {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+  function getSize()
+  {
+  return rand(size[0], size[1]);
+  }
+  function lerp(a,b,f)
+  {
+  return (b-a)*f+a;
+  }
+  function heart(x,y)
+  {
+  var s = getSize();
+  x -= s/2;
+  y -= s/2;
+  x = Math.floor(x) + rand(-5, 5);
+  y = Math.floor(y) + rand(-5, 5);
+  var fx = x + rand(-40, 40);
+  var fy = y + rand(-40, 40);
+  var i = document.createElement("img");
+  i.src = imgurl;
+  i.style = `pointer-events: none; position: fixed; width: ${s}px; left: ${x}px; top: ${y}px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; z-index: 1000000;`;
+  b.appendChild(i);
+  var f = 0;
+  var interval;
+  interval = setInterval(function() {
+  var _x = Math.floor(lerp(x, fx, f));
+  var _y = Math.floor(lerp(y, fy, f));
+  i.style = `pointer-events: none; position: fixed; width: ${s}px; left: ${_x}px; top: ${_y}px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; z-index: 1000000;`;
+  i.style.opacity = 1-f;
+  f += 0.01;
+  if (f > 1)
+  {
+  clearInterval(interval);
+  b.removeChild(i);
+  }
+  }, 10);
+  }
+  function bro(x,y)
+  {
+  for (var i = 0; i < 5; i++)
+  {
+  heart(x,y);
+  }
+  }
+  b.addEventListener("click", function(event){
+  var x = event.clientX;
+  var y = event.clientY;
+  bro(x,y);
+  });
+  
+  </script>
+
+<div class="tag">
+
+  <div class="status">
+
+    <div class="status-inside">
+    
+  </div>
+  </div>
+  
+</div>
+
+<div id="feelingbubble">
+  <div class="feelingbubbletxt">
+  <p>i am feeling...happy!
+
+</p>
+</div>
+</div>
+
+
+<img src="images/laceribbon.png" style="position:absolute;top:20px;left:300px;rotate:-20deg;" class="laceribbon">
+
+
+ 
+
+
+
+</body>
+
+</html>

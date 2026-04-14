@@ -1,0 +1,229 @@
+@font-face {
+    font-family:"dreamer";
+    src: url(fonts/DreamerTM-Regular.ttf);
+}
+@font-face {
+    font-family: "beadwork";
+    src: url(fonts/Beadwork.ttf);
+}
+@font-face {
+    font-family: "coolvetica";
+    src: url(fonts/Coolvetica\ Rg.otf);
+}
+@font-face {
+    font-family: "kiwisoda";
+    src: url(fonts/KiwiSoda.ttf);
+}
+@font-face {
+    font-family: "lokeya";
+    src: url(fonts/Lokeya.otf);
+}
+@font-face {
+    font-family: "minecraft";
+    src: url(fonts/Minecraft.ttf);
+}
+@font-face {
+    font-family: "nimbusmono";
+    src: url(fonts/nimbusmono-regular.otf);
+}
+@font-face {
+    font-family: "fairfax";
+    src: url(fonts/FairfaxItalic.ttf);
+}
+@font-face {
+    font-family: "lokeya";
+    src: url(fonts/Lokeya.otf);
+}
+@font-face{
+    font-family: "fairfax";
+    src:url("fonts/FairfaxItalic.ttf");
+}
+@font-face {
+    font-family: "genty";
+    src: url("fonts/Demo-Regular.ttf");
+}
+@font-face {
+    font-family:"helvetica";
+    src: url("fonts/HelveticaRoman.ttf");
+}
+@font-face {
+    font-family: "alagard";
+    src: url("fonts/alagard.ttf");
+}
+@font-face {
+    font-family: "belloscript";
+    src: url("fonts/Bello-Script.ttf");
+}
+@font-face {
+    font-family: "lemonmilk";
+    src: url("fonts/LEMONMILK-Bold.otf");
+}
+@font-face {
+    font-family: "goose";
+    src: url("fonts/Cocogoose-Pro-Bold-trial.ttf");
+}
+@font-face {
+  font-family: "poppins";
+  src: url("fonts/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: "basiic";
+    src: url("fonts/basiic.ttf");
+  }
+@font-face {
+  font-family: "kosugimaru";
+  src: url("fonts/KosugiMaru-Regular.ttf");
+}
+  @font-face {
+    font-family: "spirit";
+    src: url("fonts/Spirit.ttf");
+  }
+    @font-face {
+    font-family:"happylilfont" ;
+    src: url("fonts/HappyLilFont.ttf");
+  }
+  @font-face {
+    font-family: "morningtea";
+    src: url(fonts/MorningTea.ttf);
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body.home {
+  background-image: 
+    url('images/sideribbons.png'),
+    url("images/background.jpg");
+  background-position: left;
+  background-repeat: repeat-y, repeat;
+  background-size: 250px, auto;
+}
+
+.card {
+  backdrop-filter: blur(4px);
+  width: 70%;
+  max-width: 1000px;
+  padding: 3rem;
+  margin: auto;
+  display: grid;  
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 8rem;
+  border-width: 20px;
+  border-style: solid;
+  border-image: url("images/biscuitborder.gif") 8 fill round;
+  
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -3px; /* controls how far it extends, adjust as needed */
+  background-color: #f4f8fa; /* same blue as your other page */
+  z-index: 0; /* behind content */
+  border-radius: 20px;
+}
+
+/* this makes sure the actual content stays on top */
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 350px;  border-radius: 10px;
+  display: block;
+  margin-left: 1.5rem;
+}
+
+
+.text {
+  text-align: left; 
+}
+
+.quote {
+  font-size: 56px;
+  font-family: "morningtea";
+  color: #c8dbe3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+  -webkit-text-stroke: 2px #afbec4;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.star {
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+}
+.quote-block {
+  display: inline-block; 
+  transform: translateX(-20px);
+}
+
+.star {
+  text-align: center;   
+  margin-top: 0.5rem;
+  color:#737373
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .photo img {
+    margin: 0 auto;
+  }
+
+  .text {
+    text-align: center;
+  }
+}
+.buttons {
+  margin-top: 2rem;          
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: center;   
+  gap: 2rem;                 
+  padding: 0 2rem;
+
+  flex-wrap: wrap;
+}
+.btn {
+  font-family: "basiic";
+  font-size: 16px;
+  text-decoration: none;
+
+  padding: 0.9rem 1.6rem;
+  min-width: 280px;
+  text-align: center;
+
+  color: #6f8f9c;
+  background: #f4f8fa;
+
+  border: 2px solid #afbec4;
+  border-radius: 999px; 
+
+  box-shadow: 0 4px 0 #afbec4;
+
+  transition: 
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #afbec4;
+}
