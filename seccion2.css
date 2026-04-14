@@ -39,7 +39,7 @@
   body {
     background-image: 
     url('images/sideribbons.png'),
-    url("background.jpg");
+    url("images/background.jpg");
     font-family:basiic;
     background-position: left;
     background-repeat:repeat-y, repeat;
