@@ -556,8 +556,13 @@ a, a:visited {
   margin-top: 10px;
 }
 .cas-nested .cas-title {
-  font-size: 15px;
+  font-size: 14px !important;
+  color: #b28350;
 }
 .cas-nested.active .cas-title {
-  font-size: 20px;
+  font-size: 18px !important;
+  color: #8a6238;
+}
+.cas-nested .cas-arrow {
+  font-size: 0.6em;
 }
