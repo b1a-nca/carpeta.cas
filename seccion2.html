@@ -95,7 +95,7 @@
 
       <div class="cas-section cas-nested">
   <p class="cas-title" onclick="toggleCAS(this)">
-    <span class="cas-arrow">▶</span> Ver imágenes
+    <span class="cas-arrow">▶</span> Ver imagenes
   </p>
   <div class="cas-content">
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; padding:10px;">
@@ -110,7 +110,7 @@
   <!-- SECCIÓN 2 -->
   <div class="cas-section">
     <p class="cas-title" onclick="toggleCAS(this)">
-      <span class="cas-arrow">▶</span> 2. Proyecto CAS - kiosco solidario y saludable
+      <span class="cas-arrow">▶</span> 2. Proyecto CAS - Kiosco Solidario y Saludable
     </p>
     <div class="cas-content">
       <p>Acá va el texto de esta sección...</p>
@@ -123,7 +123,7 @@
   <!-- SECCIÓN 3 -->
   <div class="cas-section">
     <p class="cas-title" onclick="toggleCAS(this)">
-      <span class="cas-arrow">▶</span> 3. Proyecto CAS - souveniers de aniversario del colegio
+      <span class="cas-arrow">▶</span> 3. Proyecto CAS - Souveniers de aniversario del colegio
     </p>
     <div class="cas-content">
       <p>Acá va el texto de esta sección...</p>
@@ -235,26 +235,41 @@
 <img src="images/laceribbon.png" style="position:absolute;top:20px;left:300px;rotate:-20deg;" class="laceribbon">
 <script>
   function toggleCAS(el) {
-  var section = el.closest('.cas-section');
-  var content = section.querySelector('.cas-content');
-  var isActive = section.classList.contains('active');
+    var section = el.closest('.cas-section');
+    var content = section.querySelector(':scope > .cas-content');
+    var isActive = section.classList.contains('active');
 
-  if (isActive) {
-    content.style.maxHeight = null;
-    section.classList.remove('active');
-  } else {
-    section.classList.add('active');
-    content.style.maxHeight = content.scrollHeight + "px";
+    if (isActive) {
+      content.style.maxHeight = null;
+      section.classList.remove('active');
+    } else {
+      section.classList.add('active');
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+
+    updateAncestors(section);
   }
 
-  // walk up and resize any active ancestor sections too
-  var parent = section.parentElement.closest('.cas-section');
-  while (parent && parent.classList.contains('active')) {
-    var parentContent = parent.querySelector(':scope > .cas-content');
-    parentContent.style.maxHeight = parentContent.scrollHeight + "px";
-    parent = parent.parentElement.closest('.cas-section');
+  function updateAncestors(section) {
+    var parent = section.parentElement.closest('.cas-section');
+    while (parent && parent.classList.contains('active')) {
+      var parentContent = parent.querySelector(':scope > .cas-content');
+      parentContent.style.maxHeight = parentContent.scrollHeight + "px";
+      parent = parent.parentElement.closest('.cas-section');
+    }
   }
-}
+
+  // recalculate height once images actually finish loading
+  document.querySelectorAll('.cas-content img').forEach(function(img) {
+    img.addEventListener('load', function() {
+      var section = img.closest('.cas-section');
+      if (section && section.classList.contains('active')) {
+        var content = section.querySelector(':scope > .cas-content');
+        content.style.maxHeight = content.scrollHeight + "px";
+        updateAncestors(section);
+      }
+    });
+  });
 </script>
 <script src="updates.js"></script>
 </body>
