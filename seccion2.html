@@ -233,21 +233,27 @@
 
 
 <img src="images/laceribbon.png" style="position:absolute;top:20px;left:300px;rotate:-20deg;" class="laceribbon">
-<script>
-  function toggleCAS(el) {
-    var section = el.closest('.cas-section');
-    var content = section.querySelector('.cas-content');
-    var isActive = section.classList.contains('active');
+function toggleCAS(el) {
+  var section = el.closest('.cas-section');
+  var content = section.querySelector('.cas-content');
+  var isActive = section.classList.contains('active');
 
-    if (isActive) {
-      content.style.maxHeight = null;
-      section.classList.remove('active');
-    } else {
-      section.classList.add('active');
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+  if (isActive) {
+    content.style.maxHeight = null;
+    section.classList.remove('active');
+  } else {
+    section.classList.add('active');
+    content.style.maxHeight = content.scrollHeight + "px";
   }
-</script>
+
+  // walk up and resize any active ancestor sections too
+  var parent = section.parentElement.closest('.cas-section');
+  while (parent && parent.classList.contains('active')) {
+    var parentContent = parent.querySelector(':scope > .cas-content');
+    parentContent.style.maxHeight = parentContent.scrollHeight + "px";
+    parent = parent.parentElement.closest('.cas-section');
+  }
+}
 <script src="updates.js"></script>
 </body>
 
