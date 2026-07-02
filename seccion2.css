@@ -507,3 +507,46 @@ a, a:visited {
     .featuredimg {
     filter: contrast(99%) saturate(70%);
 }
+
+/* ===== CAS TOGGLE SECTIONS ===== */
+.cas-section {
+  margin-bottom: 15px;
+}
+
+.cas-title {
+  font-family: spirit;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: font-size 0.35s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 1px;
+}
+
+.cas-section.active .cas-title {
+  font-size: 30px;
+}
+
+.cas-title:hover {
+  letter-spacing: 2px;
+}
+
+.cas-arrow {
+  display: inline-block;
+  transition: transform 0.35s ease;
+  font-size: 0.7em;
+}
+
+.cas-section.active .cas-arrow {
+  transform: rotate(90deg);
+}
+
+.cas-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+}
