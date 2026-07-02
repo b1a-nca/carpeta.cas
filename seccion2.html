@@ -233,7 +233,8 @@
 
 
 <img src="images/laceribbon.png" style="position:absolute;top:20px;left:300px;rotate:-20deg;" class="laceribbon">
-function toggleCAS(el) {
+<script>
+  function toggleCAS(el) {
   var section = el.closest('.cas-section');
   var content = section.querySelector('.cas-content');
   var isActive = section.classList.contains('active');
@@ -254,6 +255,7 @@ function toggleCAS(el) {
     parent = parent.parentElement.closest('.cas-section');
   }
 }
+</script>
 <script src="updates.js"></script>
 </body>
 
