@@ -74,7 +74,8 @@
     <p class="cas-title" onclick="toggleCAS(this)">
       <span class="cas-arrow">▶</span> 1. Experiencia CAS - Integracion
     </p>
-    <div class="cas-content">
+   <div class="cas-content">
+  <div class="cas-content-inner">
       <img src="images/till.png" style="width:100px;filter:saturate(70%);float:right;margin:10px;animation: jerk 0.5s infinite;">
 
       <p> El evento de integración entre alumnos de 4to y 5to fue mi primera experiencia CAS como estudiante del DP1 y me sirvió como introducción a la comunidad más allá de mi propio grado. El objetivo principal del evento era fomentar la interacción, el trabajo en equipo y el sentido de pertenencia a través de una serie de juegos y actividades grupales. Esta actividad se vincula principalmente con el área de CAS: Actividad, ya que implicó participación física y dinámica, y con CAS: Servicio, al promover la integración y el apoyo entre estudiantes de diferentes promociones.
@@ -97,7 +98,6 @@
   <p class="cas-title" onclick="toggleCAS(this)">
     <span class="cas-arrow">▶</span> Ver imagenes
   </p>
-  <div class="cas-content">
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; padding:10px;">
       <img src="images/pic1.png" style="width:150px;border-radius:5px;">
       <img src="images/pic2.png" style="width:150px;border-radius:5px;">
@@ -233,43 +233,11 @@
 
 
 <img src="images/laceribbon.png" style="position:absolute;top:20px;left:300px;rotate:-20deg;" class="laceribbon">
-<script>
+  <script>
   function toggleCAS(el) {
     var section = el.closest('.cas-section');
-    var content = section.querySelector(':scope > .cas-content');
-    var isActive = section.classList.contains('active');
-
-    if (isActive) {
-      content.style.maxHeight = null;
-      section.classList.remove('active');
-    } else {
-      section.classList.add('active');
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-
-    updateAncestors(section);
+    section.classList.toggle('active');
   }
-
-  function updateAncestors(section) {
-    var parent = section.parentElement.closest('.cas-section');
-    while (parent && parent.classList.contains('active')) {
-      var parentContent = parent.querySelector(':scope > .cas-content');
-      parentContent.style.maxHeight = parentContent.scrollHeight + "px";
-      parent = parent.parentElement.closest('.cas-section');
-    }
-  }
-
-  // recalculate height once images actually finish loading
-  document.querySelectorAll('.cas-content img').forEach(function(img) {
-    img.addEventListener('load', function() {
-      var section = img.closest('.cas-section');
-      if (section && section.classList.contains('active')) {
-        var content = section.querySelector(':scope > .cas-content');
-        content.style.maxHeight = content.scrollHeight + "px";
-        updateAncestors(section);
-      }
-    });
-  });
 </script>
 <script src="updates.js"></script>
 </body>
