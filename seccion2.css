@@ -546,9 +546,17 @@ a, a:visited {
 }
 
 .cas-content {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s ease;
+}
+
+.cas-section.active > .cas-content {
+  grid-template-rows: 1fr;
+}
+
+.cas-content-inner {
   overflow: hidden;
-  transition: max-height 0.45s ease;
 }
 
 .cas-nested {
