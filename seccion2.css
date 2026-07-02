@@ -550,3 +550,14 @@ a, a:visited {
   overflow: hidden;
   transition: max-height 0.45s ease;
 }
+
+.cas-nested {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.cas-nested .cas-title {
+  font-size: 15px;
+}
+.cas-nested.active .cas-title {
+  font-size: 20px;
+}
