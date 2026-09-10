@@ -2,6 +2,7 @@ const siteUpdates = [
   { date: "06/30/2026", text: "Nuevas experiencias CAS are...in! ₍՞ .  ̫ . ՞₎" },
   { date: "04/13/2026", text: "Seccion 2 creada (>.<)" },
   { date: "04/11/2026", text: "El sitio web ha sido creado! :3" }
+  { date: "09/09/2026", text: "OMAPED ha sido agregado!" }
 ];
 
 function renderUpdates() {
